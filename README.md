@@ -5,6 +5,9 @@ A portable version of OpenBSD's
 a wrapper for the
 [realpath()](https://man.openbsd.org/realpath.3) function.
 
+This edition is versioned independently from OpenBSD, starting at 1.0
+and using a regular major/minor/patch scheme.
+
 Installing
 ----------
     make
