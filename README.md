@@ -17,5 +17,5 @@ to `CFLAGS` in the environment or on the *make* command line.
 
 License
 -------
-ISC license. Originally written by Klemens Nanni (<kn@openbsd.org). See
+ISC license. Originally written by Klemens Nanni (<kn@openbsd.org>). See
 source files.
