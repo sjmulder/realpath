@@ -22,6 +22,10 @@
 #include <stdnoreturn.h>
 #include <unistd.h>
 
+#if !defined(HAVE_PLEGE) && defined(__OpenBSD__)
+# define HAVE_PLEDGE 1
+#endif
+
 static char *argv0;
 
 noreturn void
@@ -39,8 +43,10 @@ main(int argc, char *argv[])
 
 	argv0 = argv[0];
 
+#ifdef HAVE_PLEDGE
 	if (pledge("stdio rpath", NULL) == -1)
 		err(1, "pledge");
+#endif
 
 	while ((ch = getopt(argc, argv, "q")) != -1) {
 		switch (ch) {
