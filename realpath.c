@@ -19,9 +19,10 @@
 #include <limits.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdnoreturn.h>
 #include <unistd.h>
 
-void __dead
+noreturn void
 usage(void)
 {
 	fprintf(stderr, "usage: %s [-q] file\n", getprogname());
