@@ -22,10 +22,12 @@
 #include <stdnoreturn.h>
 #include <unistd.h>
 
+static char *argv0;
+
 noreturn void
 usage(void)
 {
-	fprintf(stderr, "usage: %s [-q] file\n", getprogname());
+	fprintf(stderr, "usage: %s [-q] file\n", argv0);
 	exit(1);
 }
 
@@ -34,6 +36,8 @@ main(int argc, char *argv[])
 {
 	int ch, qflag = 0;
 	char *buf;
+
+	argv0 = argv[0];
 
 	if (pledge("stdio rpath", NULL) == -1)
 		err(1, "pledge");
