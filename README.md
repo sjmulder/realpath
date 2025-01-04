@@ -1,3 +1,10 @@
+This repository has **moved** to:
+
+https://codeberg.org/sjmulder/realpath
+
+The GitHub repository will be deleted in time.
+___
+
 OpenBSD realpath(1)
 ===================
 A portable version of OpenBSD's
